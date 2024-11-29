@@ -69,7 +69,7 @@ describe('Lezione 4 - Operatori', () => {
         expect(risultatiStringa.tipo).toBe("string");
         
         const risultatiArray = operatori.operatoriTipo([]);
-        expect(risultatiArray.inArray).toBe(true);
+        expect(risultatiArray.isArray).toBe(true);
         
         const risultatiOggetto = operatori.operatoriTipo({});
         expect(risultatiOggetto.istanzaDi).toBe(true);

@@ -87,6 +87,29 @@ function operatoreTernario(condizione, valoreSeVero, valoreSeFalso) {
     return condizione ? valoreSeVero : valoreSeFalso;
 }
 
+// Funzione per testare gli operatori di tipo
+function operatoriTipo(valore) {
+    return {
+        tipo: typeof valore,
+        isArray: Array.isArray(valore),
+        istanzaDi: valore instanceof Object
+    };
+}
+
+// Esempi avanzati di operatori
+function esempiAvanzati() {
+    const test = "test";
+    const nullo = null;
+    const indefinito = undefined;
+    
+    return {
+        concatenazioneNullish: nullo ?? test,      // Restituisce "test"
+        concatenazioneAnd: nullo && test,          // Restituisce null
+        concatenazioneOr: nullo || test,           // Restituisce "test"
+        operatoreTernario: test ? "vero" : "falso" // Restituisce "vero"
+    };
+}
+
 // Esempio pratico: Calcolo del prezzo finale
 function calcolaPrezzoFinale(prezzo, sconto, isCliente) {
     // Verifica se il prezzo è valido
@@ -110,5 +133,7 @@ module.exports = {
     dimostraAssegnazioni,
     operatoriUnari,
     operatoreTernario,
+    operatoriTipo,
+    esempiAvanzati,
     calcolaPrezzoFinale
 };

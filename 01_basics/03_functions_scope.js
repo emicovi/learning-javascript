@@ -40,14 +40,20 @@ let globale = 'Sono visibile ovunque';  // Scope globale (scatola più grande)
 
 function scopeEsempio() {
     // Scope della funzione (scatola media)
-    let funzionale = 'Sono visibile solo nella funzione';
-    
+    let funzionale = 'Sono nello scope della funzione';
+    var varVariabile;
+    let blocco;
+
     if (true) {
-        // Scope del blocco (scatola più piccola)
-        let blocco = 'Sono visibile solo nel blocco if';
-        var varVariabile = 'Sono visibile in tutta la funzione';
-        return { blocco, varVariabile, funzionale };
+        blocco = 'Sono nello scope del blocco';
+        varVariabile = 'Sono accessibile fuori dal blocco';
     }
+
+    return {
+        blocco,
+        varVariabile,
+        funzionale
+    };
 }
 
 // 5. Closure
