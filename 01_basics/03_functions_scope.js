@@ -101,7 +101,7 @@ const persona = {
     },
     salutaArrow: () => {
         // this qui si riferisce al contesto globale!
-        return `This non funziona qui: ${this.nome}`;
+        return `This non funziona qui: ${this ? this.nome : 'undefined'}`;
     }
 };
 
