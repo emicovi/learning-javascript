@@ -11,6 +11,30 @@
  * - let: usa let quando il valore della variabile deve cambiare
  * - const: usa const quando il valore non deve mai cambiare
  * - var: evita di usarlo, è il vecchio modo di dichiarare variabili
+ * 
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 🎯 Variabili: pensa alle variabili come a delle scatole dove puoi mettere delle cose:
+ * - let è come una scatola che puoi aprire e cambiare il contenuto quando vuoi
+ * - const è come una scatola sigillata: una volta che ci metti qualcosa, non puoi più cambiarla
+ * 
+ * 📦 Tipi di Dati: JavaScript ha diversi "contenitori" specializzati:
+ * - String: come un foglietto con del testo
+ * - Number: come un contatore numerico
+ * - Boolean: come un interruttore della luce (on/off)
+ * - Null: come una scatola vuota con un cartello "vuota di proposito"
+ * - Undefined: come una scatola ancora da aprire
+ * 
+ * 🔄 Type Coercion: JavaScript cerca di aiutarci convertendo automaticamente i tipi.
+ * È come quando hai:
+ * - "2" + 3 = "23" (come unire due pezzi di carta)
+ * - "5" - 3 = 2 (JavaScript capisce che vuoi fare matematica)
+ * 
+ * ⚠️ Best Practices:
+ * 1. Usa sempre const per prima scelta
+ * 2. Usa let solo quando DEVI cambiare il valore
+ * 3. Non usare mai var (è obsoleto)
+ * 4. Dai nomi significativi alle tue variabili
  */
 
 // 1. Dichiarazione di variabili

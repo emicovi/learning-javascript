@@ -9,11 +9,57 @@
  * 5. Come controllare il flusso con break e continue
  * 6. Come gestire gli errori con try...catch
  * 
- * CONCETTI CHIAVE:
- * - if/else è come un bivio stradale: scegli una strada in base a una condizione
- * - switch è come un menu: scegli cosa fare in base a un valore
- * - i cicli sono come una playlist: ripetono qualcosa finché non è finita
- * - try/catch è come una rete di sicurezza: cattura gli errori prima che crashino il programma
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 🚦 If/Else - Come un Semaforo della Vita:
+ * - if = luce verde (vai avanti se la condizione è vera)
+ * - else if = luce gialla (prova un'altra condizione)
+ * - else = luce rossa (fai questo se nient'altro funziona)
+ * 
+ * Esempio della vita reale:
+ * if (piove) {
+ *     prendiOmbrello();
+ * } else if (èNuvoloso) {
+ *     portiGiacca();
+ * } else {
+ *     mettiOcchialiDaSole();
+ * }
+ * 
+ * 🎯 Switch - Come un Telecomando:
+ * - Ogni case è come un bottone del telecomando
+ * - Il default è come il tasto "home" che usi se nessun altro tasto funziona
+ * 
+ * 🔄 Cicli For - Come Diverse Attività Ripetitive:
+ * - for classico: Come contare i giri mentre corri
+ *   "Faccio 10 giri della pista"
+ * 
+ * - for...of: Come aprire i regali di Natale
+ *   "Per ogni regalo sotto l'albero, aprilo"
+ * 
+ * - for...in: Come controllare tutte le stanze
+ *   "Per ogni stanza della casa, spegni la luce"
+ * 
+ * ⏳ While/Do-While - Come Abitudini Quotidiane:
+ * - while: Come lavarsi i denti
+ *   "Mentre ci sono residui, continua a spazzolare"
+ * 
+ * - do...while: Come assaggiare una ricetta
+ *   "Assaggia una volta, poi decidi se continuare"
+ * 
+ * 🚫 Break/Continue - Come Guardare una Serie TV:
+ * - break: "Questo episodio fa paura, spengo la TV"
+ * - continue: "Questa scena è noiosa, salto al prossimo momento"
+ * 
+ * 🛡️ Try-Catch - Come Cucinare una Nuova Ricetta:
+ * - try: "Provo a seguire la ricetta"
+ * - catch: "Se qualcosa va storto, ho un piano B"
+ * - finally: "Alla fine pulisco sempre la cucina"
+ * 
+ * ⚠️ Best Practices:
+ * 1. Mantieni le condizioni semplici e leggibili
+ * 2. Evita if/else annidati profondi
+ * 3. Preferisci for...of per gli array
+ * 4. Usa try-catch solo per errori eccezionali
  */
 
 // 1. if, else if, else

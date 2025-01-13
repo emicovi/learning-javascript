@@ -12,6 +12,32 @@
  * - Gli indici partono da 0 (il primo elemento è array[0])
  * - push/pop lavorano alla fine dell'array
  * - shift/unshift lavorano all'inizio dell'array
+ * 
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 📦 Cos'è un Array?
+ * Pensa a un array come a:
+ * - Un treno con vagoni numerati (ogni vagone è un elemento)
+ * - Una fila di cassetti numerati in un mobile
+ * - Una strada con case numerate da 0 in poi
+ * 
+ * 🎯 Come funzionano gli indici:
+ * - Il primo elemento è sempre in posizione 0 (come il piano terra di un palazzo)
+ * - L'ultimo elemento è in posizione length-1 (come l'ultimo piano)
+ * 
+ * 🔄 Operazioni Base:
+ * push/pop: Come una pila di piatti
+ * - push: metti un nuovo piatto sopra
+ * - pop: togli l'ultimo piatto
+ * 
+ * shift/unshift: Come una fila di persone
+ * - unshift: qualcuno si mette in testa alla fila
+ * - shift: la prima persona esce dalla fila
+ * 
+ * ⚠️ Best Practices:
+ * 1. Usa array quando hai una collezione ordinata di elementi simili
+ * 2. Preferisci push/pop a shift/unshift per performance migliori
+ * 3. Evita di lasciare "buchi" negli array (elementi undefined)
  */
 
 // 1. Creazione degli array

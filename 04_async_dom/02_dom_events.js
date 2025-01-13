@@ -1,13 +1,61 @@
 /**
- * Lezione 2: Manipolazione del DOM e Eventi
+ * Lezione: Manipolazione del DOM e Eventi
  * 
- * In questa lezione imparerai:
- * 1. Selezionare elementi del DOM
- * 2. Creare e modificare elementi
- * 3. Eventi e loro gestione
- * 4. Event bubbling e capturing
- * 5. Delegazione degli eventi
- * 6. Best practices per la performance
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 🎯 Cos'è il DOM?
+ * Il DOM è come l'albero genealogico di una pagina web:
+ * - HTML è il capostipite
+ * - Body e Head sono i figli
+ * - Tutti gli elementi sono discendenti
+ * 
+ * 📝 Concetti Chiave:
+ * 
+ * 1. Selezione degli Elementi
+ * Come trovare persone in un edificio:
+ * - getElementById: cerca per numero appartamento
+ * - getElementsByClassName: cerca per cognome
+ * - querySelector: cerca con criteri specifici
+ * 
+ * 2. Creazione e Modifica
+ * Come arredare una stanza:
+ * - createElement: comprare un mobile nuovo
+ * - appendChild: posizionare il mobile
+ * - setAttribute: personalizzare il mobile
+ * 
+ * 3. Eventi
+ * Come un sistema di campanelli:
+ * - click: qualcuno suona
+ * - submit: consegna un pacco
+ * - hover: passa davanti al sensore
+ * 
+ * 4. Event Bubbling
+ * Come gridare in un palazzo:
+ * - L'evento parte dal piano più basso
+ * - Sale fino all'attico
+ * - Ogni piano può "ascoltare"
+ * 
+ * Esempio pratico:
+ * click su un bottone ->
+ * bottone -> div -> body -> html
+ * 
+ * 5. Event Delegation
+ * Come un portiere che gestisce pacchi per tutto il palazzo:
+ * - Invece di un campanello per appartamento
+ * - Un portiere gestisce tutto
+ * - Più efficiente e facile da gestire
+ * 
+ * 6. Performance
+ * Come gestire un trasloco:
+ * - Batch Updates: spostare più mobili insieme
+ * - Debounce: aspettare che finisca di piovere prima di uscire
+ * - Throttle: bere acqua a intervalli regolari
+ * 
+ * ⚠️ Best Practices:
+ * 1. Minimizza le manipolazioni DOM
+ * 2. Usa la delegazione degli eventi
+ * 3. Batch update quando possibile
+ * 4. Pulisci gli event listener
  */
 
 // 1. Selezionare elementi
@@ -183,6 +231,29 @@ const DOMPerformance = {
         };
     }
 };
+
+/**
+ * Esempi Pratici:
+ * 
+ * 1. Creazione di un elemento:
+ * const div = DOMManipulator.createElement('div', {
+ *     class: 'container',
+ *     id: 'main'
+ * }, 'Contenuto');
+ * 
+ * 2. Gestione eventi:
+ * const handler = new EventHandler(button);
+ * handler.on('click', () => console.log('click'))
+ *        .on('mouseover', () => console.log('hover'));
+ * 
+ * 3. Delegazione eventi:
+ * EventDelegator.delegate(
+ *     document.body,
+ *     'button',
+ *     'click',
+ *     (e, button) => console.log('Button clicked:', button)
+ * );
+ */
 
 // Esporta tutto per i test e il riutilizzo
 module.exports = {

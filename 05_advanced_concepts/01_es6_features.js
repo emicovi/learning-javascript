@@ -1,13 +1,65 @@
 /**
- * Lezione 1: ES6+ Features Avanzate
+ * Lezione: ES6+ Features Avanzate
  * 
- * In questa lezione imparerai:
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 🎯 Concetti Avanzati ES6+:
+ * 
  * 1. Generators e Iterators
+ * Come un distributore automatico:
+ * - yield è come premere il pulsante per il prossimo prodotto
+ * - Ogni volta che premi, ottieni un nuovo elemento
+ * - Puoi fermarti quando vuoi
+ * 
+ * Esempio pratico:
+ * - Come distribuire carte da un mazzo
+ * - Come servire clienti uno alla volta
+ * 
  * 2. Proxy e Reflection
+ * Come un maggiordomo che controlla accessi e modifiche:
+ * - Proxy: il maggiordomo che intercetta le richieste
+ * - Reflection: il modo in cui il maggiordomo esegue le azioni
+ * 
+ * Esempio pratico:
+ * - Controllare chi accede a una stanza
+ * - Registrare tutte le attività
+ * 
  * 3. WeakMap e WeakSet
- * 4. Symbol e proprietà uniche
- * 5. Decorators (Stage 3)
- * 6. Optional Chaining e Nullish Coalescing
+ * Come una bacheca con post-it:
+ * - WeakMap: post-it che cadono quando rimuovi la foto
+ * - WeakSet: lista di elementi che spariscono automaticamente
+ * 
+ * Vantaggi:
+ * - Evita memory leaks
+ * - Pulisce automaticamente
+ * 
+ * 4. Symbol
+ * Come un timbro unico per documenti:
+ * - Crea identificatori unici
+ * - Non può essere duplicato
+ * - Perfetto per proprietà private
+ * 
+ * 5. Decorators
+ * Come aggiungere funzionalità a un oggetto:
+ * - @readonly: come mettere un lucchetto
+ * - @log: come installare una telecamera
+ * 
+ * 6. Optional Chaining (?.)
+ * Come cercare qualcosa in casa:
+ * - Controlla se c'è il garage
+ * - SE c'è, controlla se c'è l'auto
+ * - SE c'è, controlla se c'è la chiave
+ * 
+ * 7. Nullish Coalescing (??)
+ * Come avere un piano B:
+ * - Usa il valore se esiste
+ * - Altrimenti usa il valore di default
+ * 
+ * ⚠️ Best Practices:
+ * 1. Usa Generators per dati sequenziali
+ * 2. Usa Proxy per logging e validazione
+ * 3. Usa WeakMap/WeakSet per dati temporanei
+ * 4. Usa Symbol per proprietà veramente private
  */
 
 // 1. Generators e Iterators
@@ -155,34 +207,28 @@ function html(strings, ...values) {
 const bigNumber = 1_000_000_000_000_000n;
 const budget = 1_000_000; // più leggibile
 
-// Esempi di utilizzo
-function esempiUtilizzo() {
-    // Generator
-    const numeri = numeroGenerator();
-    console.log([...numeri]); // [1, 2, 3]
-
-    // Proxy
-    const user = new Proxy({}, handler);
-    user.nome = 'Mario';
-
-    // Symbol
-    const obj = new SpecialObject('test');
-    console.log(obj.getMetadata());
-
-    // Template literal taggato
-    const nome = 'Mario';
-    const saluto = html`<div>Ciao ${nome}!</div>`;
-
-    // Optional chaining e nullish coalescing
-    const config = {
-        settings: {
-            theme: {
-                color: 'dark'
-            }
-        }
-    };
-    const color = config?.settings?.theme?.color ?? 'light';
-}
+/**
+ * Esempi Pratici:
+ * 
+ * 1. Generator:
+ * const numeri = numeroGenerator();
+ * for (const n of numeri) {
+ *     console.log(n); // 1, 2, 3
+ * }
+ * 
+ * 2. Proxy:
+ * const user = new Proxy({}, handler);
+ * user.nome = 'Mario'; // Logga l'accesso
+ * 
+ * 3. WeakMap:
+ * const cache = new WeakMap();
+ * const user = { id: 1 };
+ * cache.set(user, { data: 'cached' });
+ * // Se user viene eliminato, cache si pulisce da sola
+ * 
+ * 4. Optional Chaining:
+ * const nome = user?.info?.name ?? 'Sconosciuto';
+ */
 
 module.exports = {
     numeroGenerator,

@@ -1,8 +1,60 @@
 /**
- * Questo modulo copre la manipolazione di dati JSON in JavaScript
+ * Lezione: Manipolazione JSON in JavaScript
+ * 
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 🎯 Cos'è il JSON?
+ * JSON è come un formato universale per scambiarsi messaggi:
+ * - Come scrivere una lettera in un linguaggio che tutti capiscono
+ * - Come usare un formato standard per compilare un modulo
+ * 
+ * 📝 Concetti Base:
+ * 
+ * 1. Validazione JSON
+ * Come controllare che una lettera sia scritta correttamente:
+ * - Verifica che la sintassi sia corretta
+ * - Controlla che il formato sia valido
+ * 
+ * 2. Parsing Sicuro
+ * Come leggere una lettera con cautela:
+ * - Prima controlla che sia leggibile
+ * - Se non lo è, hai un piano B (fallback)
+ * 
+ * 3. Stringify con Gestione Cicli
+ * Come fare una fotocopia evitando loop infiniti:
+ * - Identifica riferimenti circolari
+ * - Evita di copiare le stesse cose all'infinito
+ * 
+ * 4. Trasformazione
+ * Come tradurre un documento:
+ * - Mantieni la struttura
+ * - Cambia solo il contenuto necessario
+ * 
+ * 5. Sanitizzazione
+ * Come censurare informazioni sensibili:
+ * - Nascondi password e dati privati
+ * - Mantieni visibili le informazioni pubbliche
+ * 
+ * 6. Confronto (Diff)
+ * Come confrontare due versioni di un documento:
+ * - Trova cosa è stato aggiunto
+ * - Trova cosa è stato rimosso
+ * - Trova cosa è stato modificato
+ * 
+ * 7. Compressione
+ * Come fare un riassunto efficace:
+ * - Rimuovi le parti non necessarie
+ * - Mantieni solo l'essenziale
+ * 
+ * ⚠️ Best Practices:
+ * 1. Sempre validare JSON in ingresso
+ * 2. Usare try-catch per gestire errori
+ * 3. Sanitizzare dati sensibili
+ * 4. Fare backup prima di modifiche
  */
 
 // Validazione JSON
+// Come verificare che un messaggio sia scritto nel formato corretto
 export const isValidJSON = (str) => {
     try {
         JSON.parse(str);
@@ -13,6 +65,7 @@ export const isValidJSON = (str) => {
 };
 
 // Parse sicuro con gestione errori
+// Come leggere un messaggio con un piano B se è illeggibile
 export const safeJSONParse = (str, fallback = null) => {
     try {
         return JSON.parse(str);
@@ -22,6 +75,7 @@ export const safeJSONParse = (str, fallback = null) => {
 };
 
 // Stringify con gestione dei cicli
+// Come fare una copia evitando loop infiniti
 export const safeJSONStringify = (obj, spacing = 2) => {
     const seen = new WeakSet();
     return JSON.stringify(obj, (key, value) => {
@@ -36,6 +90,7 @@ export const safeJSONStringify = (obj, spacing = 2) => {
 };
 
 // Trasformazione JSON con schema
+// Come tradurre un documento seguendo regole precise
 export const transformJSON = (json, schema) => {
     const parsed = typeof json === 'string' ? JSON.parse(json) : json;
     
@@ -48,6 +103,7 @@ export const transformJSON = (json, schema) => {
 };
 
 // Filtraggio proprietà sensibili
+// Come censurare informazioni riservate in un documento
 export const sanitizeJSON = (json, sensitiveKeys = ['password', 'token', 'secret']) => {
     const parsed = typeof json === 'string' ? JSON.parse(json) : json;
     
@@ -77,6 +133,7 @@ export const sanitizeJSON = (json, sensitiveKeys = ['password', 'token', 'secret
 };
 
 // Diff tra due JSON
+// Come confrontare due versioni di un documento e trovare le differenze
 export const jsonDiff = (json1, json2) => {
     const obj1 = typeof json1 === 'string' ? JSON.parse(json1) : json1;
     const obj2 = typeof json2 === 'string' ? JSON.parse(json2) : json2;
@@ -116,6 +173,7 @@ export const jsonDiff = (json1, json2) => {
 };
 
 // Compressione JSON
+// Come fare un riassunto efficace mantenendo solo l'essenziale
 export const compressJSON = (json) => {
     const obj = typeof json === 'string' ? JSON.parse(json) : json;
     
@@ -142,3 +200,30 @@ export const compressJSON = (json) => {
     
     return compress(obj);
 };
+
+/**
+ * Esempi Pratici:
+ * 
+ * 1. Validazione:
+ * const valido = isValidJSON('{"nome": "Mario"}'); // true
+ * const nonValido = isValidJSON('{nome: Mario}');  // false
+ * 
+ * 2. Sanitizzazione:
+ * const dati = {
+ *     utente: 'mario',
+ *     password: '12345',
+ *     email: 'mario@example.com'
+ * };
+ * const pulito = sanitizeJSON(dati);
+ * // Result: { utente: 'mario', password: '***', email: 'mario@example.com' }
+ * 
+ * 3. Compressione:
+ * const dati = {
+ *     nome: 'Mario',
+ *     età: 30,
+ *     note: '',
+ *     indirizzo: null
+ * };
+ * const compresso = compressJSON(dati);
+ * // Result: { nome: 'Mario', età: 30 }
+ */

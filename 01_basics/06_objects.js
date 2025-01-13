@@ -9,11 +9,53 @@
  * 5. Come funziona l'ereditarietà con i prototipi
  * 6. Come destrutturare gli oggetti
  * 
- * CONCETTI CHIAVE:
- * - Gli oggetti sono come contenitori che raggruppano dati e funzionalità correlate
- * - Pensa a un oggetto come a una scheda anagrafica: ha proprietà (nome, età) e azioni (saluta, cammina)
- * - Le proprietà sono come etichette che descrivono l'oggetto
- * - I metodi sono come azioni che l'oggetto può compiere
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 📦 Gli Oggetti sono come:
+ * - Una carta d'identità: contiene tutte le informazioni di una persona
+ * - Una casa: ha caratteristiche (proprietà) e cose che puoi farci (metodi)
+ * 
+ * 🏠 Struttura di un Oggetto:
+ * - Proprietà = caratteristiche della casa
+ *   • indirizzo (string)
+ *   • numeroStanze (number)
+ *   • arredata (boolean)
+ * 
+ * - Metodi = azioni che puoi fare nella casa
+ *   • apriPorta()
+ *   • accendiLuce()
+ *   • pulisciStanza()
+ * 
+ * 🔄 Prototipi ed Ereditarietà:
+ * Immagina una catena di ristoranti:
+ * - Il "Ristorante Base" (prototipo) ha:
+ *   • cucina
+ *   • tavoli
+ *   • serviPasto()
+ * 
+ * - "Ristorante Italiano" (eredita dal base):
+ *   • Eredita tutto dal base
+ *   • Aggiunge: serviPasta()
+ * 
+ * 🎯 Getter e Setter:
+ * Come un salvadanaio:
+ * - getter: guardi quanto hai risparmiato
+ * - setter: aggiungi o togli soldi
+ * 
+ * 📝 Destructuring:
+ * Come aprire un pacco e prendere solo ciò che serve:
+ * - Da un pacco regalo {libro, DVD, gioco}
+ * - Prendi solo: const {libro} = pacco
+ * 
+ * 📸 Copie di Oggetti:
+ * - Shallow Copy: come una fotocopia (solo la prima pagina)
+ * - Deep Copy: come riscrivere tutto il documento a mano
+ * 
+ * ⚠️ Best Practices:
+ * 1. Usa nomi descrittivi per proprietà e metodi
+ * 2. Preferisci dot notation (oggetto.proprietà)
+ * 3. Usa const per oggetti (ma puoi modificare le proprietà)
+ * 4. Fai copie profonde quando serve indipendenza totale
  */
 
 // 1. Creazione di oggetti base

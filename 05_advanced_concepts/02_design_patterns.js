@@ -1,13 +1,89 @@
 /**
- * Lezione 2: Design Patterns in JavaScript
+ * Lezione: Design Patterns in JavaScript
  * 
- * In questa lezione imparerai:
- * 1. Pattern Creazionali (Singleton, Factory, Builder)
- * 2. Pattern Strutturali (Adapter, Decorator, Facade)
- * 3. Pattern Comportamentali (Observer, Strategy, Command)
- * 4. Module Pattern e Revealing Module
- * 5. Dependency Injection
- * 6. Best Practices
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 🎯 Cos'è un Design Pattern?
+ * Come una ricetta collaudata per risolvere problemi comuni:
+ * - Non devi reinventare la ruota
+ * - Soluzioni testate e affidabili
+ * - Vocabolario comune tra sviluppatori
+ * 
+ * 1. PATTERN CREAZIONALI:
+ * Come diverse ricette per creare oggetti
+ * 
+ * Singleton:
+ * Come avere un solo telecomando per tutta la TV:
+ * - Una sola istanza per tutto il programma
+ * - Esempio: configurazione globale, connessione database
+ * 
+ * Factory:
+ * Come una fabbrica di giocattoli:
+ * - Dai le specifiche (tipo)
+ * - La fabbrica produce l'oggetto giusto
+ * - Esempio: creare diversi tipi di documenti
+ * 
+ * Builder:
+ * Come preparare un panino al fast food:
+ * - Scegli il pane
+ * - Aggiungi gli ingredienti
+ * - Personalizza come vuoi
+ * 
+ * 2. PATTERN STRUTTURALI:
+ * Come organizzare oggetti e classi
+ * 
+ * Adapter:
+ * Come un adattatore per prese elettriche:
+ * - Converte un'interfaccia in un'altra
+ * - Fa funzionare insieme sistemi incompatibili
+ * - Esempio: convertire dati XML in JSON
+ * 
+ * Decorator:
+ * Come aggiungere accessori a un vestito:
+ * - Aggiunge funzionalità senza modificare la classe
+ * - Esempio: aggiungere logging, caching
+ * 
+ * Facade:
+ * Come il telecomando universale:
+ * - Semplifica un sistema complesso
+ * - Nasconde i dettagli complicati
+ * - Esempio: libreria di utility
+ * 
+ * 3. PATTERN COMPORTAMENTALI:
+ * Come gestire interazioni tra oggetti
+ * 
+ * Observer:
+ * Come un sistema di notifiche:
+ * - Gli abbonati ricevono aggiornamenti
+ * - Il publisher invia le novità
+ * - Esempio: aggiornamenti UI, eventi
+ * 
+ * Strategy:
+ * Come scegliere il mezzo di trasporto:
+ * - Cambi strategia in base alle necessità
+ * - Esempio: diversi metodi di pagamento
+ * 
+ * Command:
+ * Come un telecomando con undo/redo:
+ * - Incapsula azioni in oggetti
+ * - Può annullare/ripetere operazioni
+ * 
+ * 4. MODULE PATTERN:
+ * Come organizzare un cassetto:
+ * - Tutto ha il suo posto
+ * - Alcune cose sono private
+ * - Altre sono pubbliche
+ * 
+ * 5. DEPENDENCY INJECTION:
+ * Come fornire ingredienti a un cuoco:
+ * - Non cerca gli ingredienti da solo
+ * - Li riceve già pronti
+ * - Più facile cambiare ingredienti
+ * 
+ * ⚠️ Best Practices:
+ * 1. Usa il pattern più semplice che risolve il problema
+ * 2. Non forzare l'uso di pattern non necessari
+ * 3. Documenta il perché usi un certo pattern
  */
 
 // 1. PATTERN CREAZIONALI
@@ -114,12 +190,10 @@ class NewAPI {
 
     getData() {
         const xmlData = this.adapter.getDataInXML();
-        // Converti XML in JSON
         return JSON.parse(this.xmlToJson(xmlData));
     }
 
     xmlToJson(xml) {
-        // Implementazione semplificata
         return '{"data": [1, 2]}';
     }
 }
@@ -285,33 +359,22 @@ class ServiceContainer {
     }
 }
 
-// Esempi di utilizzo dei pattern
-function esempiUtilizzo() {
-    // Singleton
-    const db1 = Database.getInstance();
-    const db2 = Database.getInstance();
-    console.log(db1 === db2); // true
-
-    // Builder
-    const builder = new UIComponentBuilder();
-    const button = builder
-        .setType('button')
-        .addProps({ text: 'Click me' })
-        .setStyles({ color: 'blue' })
-        .build();
-
-    // Observer
-    const emitter = new EventEmitter();
-    emitter.on('update', data => console.log(data));
-    emitter.emit('update', { message: 'Hello' });
-
-    // Strategy
-    const processor = new PaymentProcessor();
-    processor.setStrategy({
-        process: amount => `Processed ${amount}€`
-    });
-    console.log(processor.processPayment(100));
-}
+/**
+ * Esempi di Utilizzo dei Pattern:
+ * 
+ * 1. Singleton:
+ * const config = Database.getInstance();
+ * config.set('theme', 'dark');
+ * 
+ * 2. Factory:
+ * const factory = new VehicleFactory();
+ * const car = factory.createVehicle('car', { color: 'red' });
+ * 
+ * 3. Observer:
+ * const events = new EventEmitter();
+ * events.on('userLogin', user => console.log(`${user} logged in`));
+ * events.emit('userLogin', 'Mario');
+ */
 
 module.exports = {
     Database,
@@ -323,6 +386,5 @@ module.exports = {
     PaymentProcessor,
     CommandManager,
     UserModule,
-    ServiceContainer,
-    esempiUtilizzo
+    ServiceContainer
 };

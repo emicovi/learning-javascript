@@ -8,10 +8,41 @@
  * 4. Scope (globale, funzione, blocco)
  * 5. Closure (funzioni che ricordano il loro ambiente)
  * 
- * CONCETTI CHIAVE:
- * - Le funzioni sono come ricette: prendono ingredienti (parametri) e producono un risultato
- * - Lo scope è come una scatola: le variabili vivono dentro la loro scatola
- * - Le closure sono funzioni che "ricordano" le variabili del loro ambiente
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 🏭 Le Funzioni sono come:
+ * - Una fabbrica: riceve materie prime (parametri) e produce prodotti finiti (risultato)
+ * - Una ricetta di cucina: segui i passaggi con gli ingredienti per ottenere un piatto
+ * - Una macchina del caffè: metti il caffè, premi un bottone, ottieni il caffè
+ * 
+ * 📦 Lo Scope è come:
+ * - Un sistema di scatole Russe (una dentro l'altra):
+ *   - Scatola Grande (Scope Globale): visibile da tutti
+ *   - Scatola Media (Scope Funzione): visibile solo dentro la funzione
+ *   - Scatola Piccola (Scope Blocco): visibile solo dentro il blocco {}
+ * 
+ * 🧠 Le Closure sono come:
+ * - Un diario segreto: la funzione "ricorda" le informazioni anche dopo essere stata creata
+ * - Una busta sigillata: mantiene al suo interno le variabili del suo ambiente
+ * 
+ * 🎯 Tipi di Funzioni:
+ * 1. Function Declaration:
+ *    - Come un'istruzione formale (function nome() {})
+ *    - Disponibile in tutto il file
+ * 
+ * 2. Function Expression:
+ *    - Come assegnare un compito a qualcuno (const nome = function() {})
+ *    - Disponibile solo dopo l'assegnazione
+ * 
+ * 3. Arrow Function:
+ *    - La versione moderna e compatta
+ *    - Ideale per operazioni brevi
+ * 
+ * ⚠️ Best Practices:
+ * 1. Usa nomi descrittivi per le funzioni
+ * 2. Una funzione dovrebbe fare una cosa sola
+ * 3. Preferisci const per le function expression
+ * 4. Usa arrow functions per callback brevi
  */
 
 // 1. Funzioni base

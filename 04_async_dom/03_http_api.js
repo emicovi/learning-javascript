@@ -1,13 +1,69 @@
 /**
- * Lezione 3: HTTP Requests e Interazione con API
+ * Lezione: HTTP Requests e Interazione con API
  * 
- * In questa lezione imparerai:
- * 1. Fetch API nativa
- * 2. Axios e altri HTTP clients
- * 3. REST API interactions
- * 4. Gestione errori HTTP
- * 5. Best practices per chiamate API
- * 6. Autenticazione e headers
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 🎯 Cos'è una API?
+ * Un'API è come un cameriere in un ristorante:
+ * - Tu (il client) fai richieste
+ * - Il cameriere (API) porta le richieste in cucina (server)
+ * - La cucina prepara e il cameriere riporta la risposta
+ * 
+ * 📝 Metodi HTTP principali:
+ * 
+ * GET: Come chiedere un menu
+ * - "Vorrei vedere la lista dei piatti disponibili"
+ * - Non modifica nulla, solo richiede informazioni
+ * 
+ * POST: Come ordinare un piatto nuovo
+ * - "Vorrei ordinare una pizza margherita"
+ * - Crea nuove risorse sul server
+ * 
+ * PUT: Come modificare un ordine esistente
+ * - "Vorrei aggiungere funghi alla mia pizza"
+ * - Aggiorna completamente una risorsa
+ * 
+ * DELETE: Come cancellare un ordine
+ * - "Vorrei annullare il mio ordine"
+ * - Rimuove una risorsa
+ * 
+ * 🔑 Autenticazione:
+ * Come un braccialetto in un resort:
+ * - Login = ricevi il braccialetto
+ * - Token = mostri il braccialetto per accedere ai servizi
+ * - Logout = restituisci il braccialetto
+ * 
+ * 🚦 Status Code HTTP:
+ * - 200: "Ecco il suo ordine" (OK)
+ * - 201: "Ordine creato" (Created)
+ * - 400: "Non ho capito l'ordine" (Bad Request)
+ * - 401: "Mi mostri il braccialetto?" (Unauthorized)
+ * - 404: "Questo piatto non esiste" (Not Found)
+ * - 500: "La cucina è in fiamme" (Server Error)
+ * 
+ * ⚡ Gestione Errori:
+ * Come gestire problemi al ristorante:
+ * - Verifica se il piatto è disponibile
+ * - Gestisci alternative se un ingrediente manca
+ * - Comunica chiaramente i problemi al cliente
+ * 
+ * 🔄 Rate Limiting:
+ * Come gestire troppe ordinazioni:
+ * - Limita il numero di ordini per tavolo
+ * - Metti in coda le richieste eccessive
+ * - Previeni il sovraccarico della cucina
+ * 
+ * 📦 Caching:
+ * Come tenere il menu a portata di mano:
+ * - Salva temporaneamente informazioni frequenti
+ * - Evita di chiedere sempre le stesse cose
+ * - Migliora le performance
+ * 
+ * ⚠️ Best Practices:
+ * 1. Gestisci sempre gli errori
+ * 2. Usa autenticazione quando necessario
+ * 3. Implementa rate limiting
+ * 4. Utilizza il caching appropriatamente
  */
 
 // 1. Classe base per le chiamate HTTP

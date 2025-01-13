@@ -8,11 +8,50 @@
  * 4. Operatori di assegnazione (per dare valori alle variabili)
  * 5. Altri operatori utili
  * 
- * CONCETTI CHIAVE:
- * - Gli operatori aritmetici funzionano come una calcolatrice (+, -, *, /, %)
- * - Gli operatori di confronto restituiscono sempre true o false
- * - && (AND) richiede che tutte le condizioni siano vere
- * - || (OR) richiede che almeno una condizione sia vera
+ * TEORIA SEMPLIFICATA:
+ * 
+ * 🧮 Operatori Aritmetici:
+ * Pensa a una cucina:
+ * + : Aggiungere ingredienti
+ * - : Togliere ingredienti
+ * * : Moltiplicare la ricetta (es: da 2 a 4 porzioni)
+ * / : Dividere in porzioni
+ * % : Quanto resta dopo aver diviso (come gli avanzi)
+ * 
+ * 🔍 Operatori di Confronto:
+ * Come confrontare oggetti:
+ * == : "Sembrano uguali" (5 e "5" sembrano uguali)
+ * === : "Sono identici" (5 e "5" non sono identici)
+ * > : "Più grande di" (come confrontare altezze)
+ * < : "Più piccolo di" (come confrontare pesi)
+ * 
+ * 🎯 Operatori Logici:
+ * Come prendere decisioni:
+ * && (AND): Come le condizioni per uscire:
+ *    "Ho fatto i compiti E ho pulito la camera"
+ * || (OR): Come le opzioni per andare al lavoro:
+ *    "Prendo la macchina O prendo il bus"
+ * ! (NOT): Come invertire una condizione:
+ *    "NON piove" = posso uscire senza ombrello
+ * 
+ * 📦 Operatori di Assegnazione:
+ * Come gestire il salvadanaio:
+ * = : Mettere una somma iniziale
+ * += : Aggiungere altri soldi
+ * -= : Togliere dei soldi
+ * *= : Moltiplicare i risparmi
+ * /= : Dividere i risparmi
+ * 
+ * 🎨 Operatore Ternario:
+ * Come un mini-semaforo:
+ * condizione ? verde : rosso
+ * "Piove ? prendi l'ombrello : prendi gli occhiali da sole"
+ * 
+ * ⚠️ Best Practices:
+ * 1. Usa === invece di == per confronti più sicuri
+ * 2. Evita concatenazioni troppo lunghe di operatori logici
+ * 3. Usa parentesi per rendere chiare le precedenze
+ * 4. Preferisci forme compatte (+=) quando possibile
  */
 
 // 1. Operatori aritmetici
